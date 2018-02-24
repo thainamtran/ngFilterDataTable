@@ -3,6 +3,8 @@ FilterDataTable component is built on DataTable of Angular Material, provides us
 
 Dependencies: Angular Material
 
+DEMO: http://18.222.11.145:5000/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
