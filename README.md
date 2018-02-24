@@ -1,6 +1,7 @@
 # TableFilter
+FilterDataTable component is built on DataTable of Angular Material, provides us Filter Feature for each column.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+Dependencies: Angular Material
 
 ## Development server
 

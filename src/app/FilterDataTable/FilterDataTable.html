@@ -1,0 +1,25 @@
+<div>
+    <mat-table #table [dataSource]="dataSource">
+        <ng-container *ngFor="let field of fields" [matColumnDef]="field">
+            <mat-header-cell *matHeaderCellDef>
+                <div class="column-header" [ngClass]="{'show-filter':showFilter===field}">
+                    <div>{{field}}</div>
+                    <div [ngClass]="{'active-filter':field===showFilter}">
+                        <input [value]="search[field]" (keyup)="changeSearch(field, $event.target.value)" />
+                        <span (click)="changeSearch(field,'')"><i class="fas fa-eraser"></i></span>
+                    </div>
+                    <div (click)="showFilter=(showFilter===field?null:field)">
+                        <i class="fas fa-filter"></i>
+                        <div *ngIf="search[field]!==''">
+                            [{{search[field]}}]
+                        </div>
+                    </div>
+                </div>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element[field]}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="fields"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: fields;"></mat-row>
+    </mat-table>
+</div>

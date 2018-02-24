@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { MaterialModule } from './mat.module';
+import { FilterDataTable } from './FilterDataTable/FilterDataTable';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, FilterDataTable
   ],
   imports: [
-    BrowserModule
+    BrowserModule, MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
